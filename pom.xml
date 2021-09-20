@@ -272,11 +272,6 @@
                 <version>1.7.25</version>
             </dependency>
             <dependency>
-                <groupId>com.google.guava</groupId>
-                <artifactId>guava</artifactId>
-                <version>28.1-jre</version>
-            </dependency>
-            <dependency>
                 <groupId>com.fasterxml.jackson.datatype</groupId>
                 <artifactId>jackson-datatype-jsr310</artifactId>
                 <version>2.11.1</version>
@@ -310,21 +305,6 @@
                 <groupId>commons-logging</groupId>
                 <artifactId>commons-logging</artifactId>
                 <version>1.2</version>
-            </dependency>
-            <dependency>
-                <groupId>org.jboss.resteasy</groupId>
-                <artifactId>resteasy-client</artifactId>
-                <version>${version.resteasy}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.jboss.resteasy</groupId>
-                <artifactId>resteasy-jackson-provider</artifactId>
-                <version>${version.resteasy}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.jboss.resteasy</groupId>
-                <artifactId>resteasy-jaxb-provider</artifactId>
-                <version>${version.resteasy}</version>
             </dependency>
             <dependency>
                 <groupId>org.ow2.asm</groupId>
@@ -370,10 +350,6 @@
                 the one of Kotlin.
               -->
 
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-compiler-plugin</artifactId>
-            </plugin>
 
             <plugin>
                 <artifactId>kotlin-maven-plugin</artifactId>
@@ -518,17 +494,6 @@
                     <version>3.0.0</version>
                 </plugin>
 
-                <!-- Built-in plugin used to compile Java code -->
-                <plugin>
-                    <groupId>org.apache.maven.plugins</groupId>
-                    <artifactId>maven-compiler-plugin</artifactId>
-                    <version>3.8.1</version>
-                    <inherited>true</inherited>
-                    <configuration>
-                        <release>${version.java}</release>
-                    </configuration>
-                </plugin>
-
                 <!-- Built-in plugin used to execute unit tests -->
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
@@ -558,20 +523,6 @@
                             <goals>
                                 <goal>integration-test</goal>
                                 <goal>verify</goal>
-                            </goals>
-                        </execution>
-                    </executions>
-                </plugin>
-
-                <plugin>
-                    <!-- Need to create self-executable uber/fat jars for SpringBoot -->
-                    <groupId>org.springframework.boot</groupId>
-                    <artifactId>spring-boot-maven-plugin</artifactId>
-                    <version>${version.springboot}</version>
-                    <executions>
-                        <execution>
-                            <goals>
-                                <goal>repackage</goal>
                             </goals>
                         </execution>
                     </executions>
