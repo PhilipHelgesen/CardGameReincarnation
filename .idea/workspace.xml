@@ -4,45 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cbb20252-02f8-48a4-b183-f5ac506bfc2e" name="Changes" comment="Updated .gitignore file">
-      <change afterPath="$PROJECT_DIR$/.idea/jpa-buddy.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CardGameReincarnation.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cards-dto/cards-dto.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cards-dto/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cards-dto/src/main/kotlin/org/tsdes/cards/dto/CardDto.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cards-dto/src/main/kotlin/org/tsdes/cards/dto/CollectionDto.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cards-dto/src/main/kotlin/org/tsdes/cards/dto/Rarity.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/user-collections/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/user-collections/src/main/kotlin/org/tsdes/usercollections/Application.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/user-collections/src/main/kotlin/org/tsdes/usercollections/CardService.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/user-collections/src/main/kotlin/org/tsdes/usercollections/db/CardCopy.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/user-collections/src/main/kotlin/org/tsdes/usercollections/db/User.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/user-collections/src/main/kotlin/org/tsdes/usercollections/db/UserService.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/user-collections/src/main/kotlin/org/tsdes/usercollections/model/Card.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/user-collections/src/main/kotlin/org/tsdes/usercollections/model/Collection.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/user-collections/src/main/resources/application.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/user-collections/src/main/resources/db/migration/V1.0__createDB.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/user-collections/src/test/kotlin/org/tsdes/usercollections/FakeTest.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/user-collections/src/test/kotlin/org/tsdes/usercollections/db/UserServiceTest.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/user-collections/src/test/resources/application-test.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/user-collections/user-collections.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+    <list default="true" id="cbb20252-02f8-48a4-b183-f5ac506bfc2e" name="Changes" comment="small change to DB and refactored some dependencies">
+      <change afterPath="$PROJECT_DIR$/user-collections/src/main/kotlin/org/tsdes/usercollections/DtoConverter.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user-collections/src/main/kotlin/org/tsdes/usercollections/dto/CardCopyDto.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user-collections/src/main/kotlin/org/tsdes/usercollections/dto/UserDto.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cards-dto/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/cards-dto/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Tasks/card-game-part-01.md" beforeDir="false" afterPath="$PROJECT_DIR$/tasks/card-game-part-01.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Tasks/card-game-part-02.md" beforeDir="false" afterPath="$PROJECT_DIR$/tasks/card-game-part-02.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Tasks/card-game-part-03.md" beforeDir="false" afterPath="$PROJECT_DIR$/tasks/card-game-part-03.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Tasks/card-game-part-04.md" beforeDir="false" afterPath="$PROJECT_DIR$/tasks/card-game-part-04.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Tasks/card-game-part-05.md" beforeDir="false" afterPath="$PROJECT_DIR$/tasks/card-game-part-05.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Tasks/card-game-part-06.md" beforeDir="false" afterPath="$PROJECT_DIR$/tasks/card-game-part-06.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Tasks/card-game-part-07.md" beforeDir="false" afterPath="$PROJECT_DIR$/tasks/card-game-part-07.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Tasks/card-game-part-08.md" beforeDir="false" afterPath="$PROJECT_DIR$/tasks/card-game-part-08.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Tasks/card-game-part-09.md" beforeDir="false" afterPath="$PROJECT_DIR$/tasks/card-game-part-09.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Tasks/card-game-part-10.md" beforeDir="false" afterPath="$PROJECT_DIR$/tasks/card-game-part-10.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Tasks/card-game-part-11.md" beforeDir="false" afterPath="$PROJECT_DIR$/tasks/card-game-part-11.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/org/example/Hello.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/kotlin/org/example/HelloTest.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-collections/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/user-collections/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-collections/src/main/kotlin/org/tsdes/usercollections/Application.kt" beforeDir="false" afterPath="$PROJECT_DIR$/user-collections/src/main/kotlin/org/tsdes/usercollections/Application.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -124,6 +94,9 @@
     <key name="CreateKotlinClassDialog.RecentsKey">
       <recent name="org.tsdes.usercollections.db" />
     </key>
+    <key name="MoveKotlinTopLevelDeclarationsDialog.RECENTS_KEY">
+      <recent name="org.tsdes.usercollections.dto" />
+    </key>
   </component>
   <component name="RunManager" selected="JUnit.UserServiceTest">
     <configuration name="UserServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
@@ -195,7 +168,7 @@
       <option name="presentableId" value="Default" />
       <updated>1632131981936</updated>
       <workItem from="1632131983257" duration="2193000" />
-      <workItem from="1632134638523" duration="5184000" />
+      <workItem from="1632134638523" duration="8104000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1632132509677</created>
@@ -225,7 +198,35 @@
       <option name="project" value="LOCAL" />
       <updated>1632134042774</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Finished task 1">
+      <created>1632140816709</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1632140816709</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Refactored dependencies">
+      <created>1632141188885</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1632141188885</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Refactored properties">
+      <created>1632141250314</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1632141250314</updated>
+    </task>
+    <task id="LOCAL-00008" summary="small change to DB and refactored some dependencies">
+      <created>1632141429937</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1632141429937</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -248,6 +249,10 @@
     <MESSAGE value="test change" />
     <MESSAGE value="Added all 11 tasks for the semester" />
     <MESSAGE value="Updated .gitignore file" />
-    <option name="LAST_COMMIT_MESSAGE" value="Updated .gitignore file" />
+    <MESSAGE value="Finished task 1" />
+    <MESSAGE value="Refactored dependencies" />
+    <MESSAGE value="Refactored properties" />
+    <MESSAGE value="small change to DB and refactored some dependencies" />
+    <option name="LAST_COMMIT_MESSAGE" value="small change to DB and refactored some dependencies" />
   </component>
 </project>

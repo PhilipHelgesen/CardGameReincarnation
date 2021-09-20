@@ -11,5 +11,11 @@
     <artifactId>cards-dto</artifactId>
     <packaging>jar</packaging>
 
+    <dependencies>
+        <dependency>
+            <groupId>io.springfox</groupId>
+            <artifactId>springfox-boot-starter</artifactId>
+        </dependency>
+    </dependencies>
 
 </project>
