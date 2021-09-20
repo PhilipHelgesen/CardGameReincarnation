@@ -4,11 +4,57 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cbb20252-02f8-48a4-b183-f5ac506bfc2e" name="Changes" comment="Added all 11 tasks for the semester" />
+    <list default="true" id="cbb20252-02f8-48a4-b183-f5ac506bfc2e" name="Changes" comment="Updated .gitignore file">
+      <change afterPath="$PROJECT_DIR$/.idea/jpa-buddy.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CardGameReincarnation.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cards-dto/cards-dto.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cards-dto/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cards-dto/src/main/kotlin/org/tsdes/cards/dto/CardDto.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cards-dto/src/main/kotlin/org/tsdes/cards/dto/CollectionDto.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cards-dto/src/main/kotlin/org/tsdes/cards/dto/Rarity.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user-collections/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user-collections/src/main/kotlin/org/tsdes/usercollections/Application.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user-collections/src/main/kotlin/org/tsdes/usercollections/CardService.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user-collections/src/main/kotlin/org/tsdes/usercollections/db/CardCopy.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user-collections/src/main/kotlin/org/tsdes/usercollections/db/User.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user-collections/src/main/kotlin/org/tsdes/usercollections/db/UserService.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user-collections/src/main/kotlin/org/tsdes/usercollections/model/Card.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user-collections/src/main/kotlin/org/tsdes/usercollections/model/Collection.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user-collections/src/main/resources/application.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user-collections/src/main/resources/db/migration/V1.0__createDB.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user-collections/src/test/kotlin/org/tsdes/usercollections/FakeTest.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user-collections/src/test/kotlin/org/tsdes/usercollections/db/UserServiceTest.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user-collections/src/test/resources/application-test.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user-collections/user-collections.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Tasks/card-game-part-01.md" beforeDir="false" afterPath="$PROJECT_DIR$/tasks/card-game-part-01.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Tasks/card-game-part-02.md" beforeDir="false" afterPath="$PROJECT_DIR$/tasks/card-game-part-02.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Tasks/card-game-part-03.md" beforeDir="false" afterPath="$PROJECT_DIR$/tasks/card-game-part-03.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Tasks/card-game-part-04.md" beforeDir="false" afterPath="$PROJECT_DIR$/tasks/card-game-part-04.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Tasks/card-game-part-05.md" beforeDir="false" afterPath="$PROJECT_DIR$/tasks/card-game-part-05.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Tasks/card-game-part-06.md" beforeDir="false" afterPath="$PROJECT_DIR$/tasks/card-game-part-06.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Tasks/card-game-part-07.md" beforeDir="false" afterPath="$PROJECT_DIR$/tasks/card-game-part-07.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Tasks/card-game-part-08.md" beforeDir="false" afterPath="$PROJECT_DIR$/tasks/card-game-part-08.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Tasks/card-game-part-09.md" beforeDir="false" afterPath="$PROJECT_DIR$/tasks/card-game-part-09.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Tasks/card-game-part-10.md" beforeDir="false" afterPath="$PROJECT_DIR$/tasks/card-game-part-10.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Tasks/card-game-part-11.md" beforeDir="false" afterPath="$PROJECT_DIR$/tasks/card-game-part-11.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/org/example/Hello.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/kotlin/org/example/HelloTest.kt" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Kotlin Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
@@ -17,6 +63,30 @@
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
+  <component name="JpbToolWindowState">
+    <option name="myId2FirstActivated">
+      <map>
+        <entry key="JPA Inspector" value="true" />
+        <entry key="JPA Palette" value="true" />
+        <entry key="JPA Structure" value="true" />
+      </map>
+    </option>
+    <option name="myId2Visible">
+      <map>
+        <entry key="JPA Inspector" value="false" />
+        <entry key="JPA Palette" value="false" />
+        <entry key="JPA Structure" value="false" />
+      </map>
+    </option>
   </component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
@@ -32,8 +102,13 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$USER_HOME$/OneDrive - Høyskolen Kristiania/4. semester/Enterprise Programmering 1/Git" />
     <property name="node.js.detected.package.eslint" value="true" />
@@ -41,7 +116,47 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
   </component>
-  <component name="RunManager">
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\phili\Skole\Semester 5\CardGameReincarnation" />
+      <recent name="C:\Users\phili\Skole\Semester 5\CardGameReincarnation\src\Tasks" />
+    </key>
+    <key name="CreateKotlinClassDialog.RecentsKey">
+      <recent name="org.tsdes.usercollections.db" />
+    </key>
+  </component>
+  <component name="RunManager" selected="JUnit.UserServiceTest">
+    <configuration name="UserServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="user-collections" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.tsdes.usercollections.db.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.tsdes.usercollections.db" />
+      <option name="MAIN_CLASS_NAME" value="org.tsdes.usercollections.db.UserServiceTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserServiceTest.testBuyCard" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="user-collections" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.tsdes.usercollections.db.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.tsdes.usercollections.db" />
+      <option name="MAIN_CLASS_NAME" value="org.tsdes.usercollections.db.UserServiceTest" />
+      <option name="METHOD_NAME" value="testBuyCard" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="HelloKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.example.HelloKt" />
       <module name="CardGameReincarnation" />
@@ -49,8 +164,24 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Application" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="user-collections" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.tsdes.usercollections.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="SPRING_BOOT_MAIN_CLASS" value="org.tsdes.usercollections.Application" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.UserServiceTest" />
+        <item itemvalue="JUnit.UserServiceTest.testBuyCard" />
+        <item itemvalue="Spring Boot.Application" />
         <item itemvalue="Kotlin.HelloKt" />
       </list>
     </recent_temporary>
@@ -63,7 +194,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1632131981936</updated>
-      <workItem from="1632131983257" duration="1589000" />
+      <workItem from="1632131983257" duration="2193000" />
+      <workItem from="1632134638523" duration="5184000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1632132509677</created>
@@ -86,7 +218,14 @@
       <option name="project" value="LOCAL" />
       <updated>1632133934597</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Updated .gitignore file">
+      <created>1632134042774</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1632134042774</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -102,11 +241,13 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Initial commit" />
     <MESSAGE value="test change" />
     <MESSAGE value="Added all 11 tasks for the semester" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added all 11 tasks for the semester" />
+    <MESSAGE value="Updated .gitignore file" />
+    <option name="LAST_COMMIT_MESSAGE" value="Updated .gitignore file" />
   </component>
 </project>
