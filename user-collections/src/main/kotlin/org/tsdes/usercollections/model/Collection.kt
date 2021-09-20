@@ -4,12 +4,12 @@ import org.tsdes.cards.dto.CollectionDto
 import org.tsdes.cards.dto.Rarity
 import kotlin.math.abs
 
-class Collection (
-    val cards : List<Card> ,
-    val prices : Map<Rarity, Int> ,
-    val millValues : Map<Rarity, Int> ,
+class Collection(
+    val cards: List<Card>,
+    val prices: Map<Rarity, Int>,
+    val millValues: Map<Rarity, Int>,
     val rarityProbabilities: Map<Rarity, Double>
-        ){
+) {
 
     constructor(dto: CollectionDto) : this(
         dto.cards.map { Card(it) },
@@ -18,10 +18,10 @@ class Collection (
         dto.rarityProbabilities.toMap()
     )
 
-    val cardsByRarity : Map<Rarity, List<Card>> = cards.groupBy { it.rarity }
+    val cardsByRarity: Map<Rarity, List<Card>> = cards.groupBy { it.rarity }
 
     init {
-        if (cards.isEmpty()){
+        if (cards.isEmpty()) {
             throw IllegalArgumentException("No cards")
         }
         Rarity.values().forEach {
@@ -31,7 +31,7 @@ class Collection (
         }
 
         val p = rarityProbabilities.values.sum()
-        if (abs(1 -p) > 0.000001){
+        if (abs(1 - p) > 0.000001) {
             throw IllegalArgumentException("Invalid probability sum: $p")
         }
 

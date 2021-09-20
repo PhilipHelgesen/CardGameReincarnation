@@ -14,7 +14,7 @@ import javax.persistence.LockModeType
 interface UserRepository : CrudRepository<User, String> {
     @Lock(LockModeType.PESSIMISTIC_WRITE)
     @Query("select u from User u where u.userId = :id")
-    fun lockedFind(@Param("id") userId: String) : User?
+    fun lockedFind(@Param("id") userId: String): User?
 }
 
 @Service
@@ -24,22 +24,22 @@ class UserService(
     private val cardService: CardService
 ) {
 
-    companion object{
+    companion object {
         const val CARDS_PER_PACK = 5
     }
 
-    fun findByIdEager(userId: String) : User?{
+    fun findByIdEager(userId: String): User? {
 
         val user = userRepository.findById(userId).orElse(null)
-        if(user != null){
+        if (user != null) {
             user.ownedCards.size
         }
         return user
     }
 
-    fun registerNewUser(userId: String) : Boolean{
+    fun registerNewUser(userId: String): Boolean {
 
-        if(userRepository.existsById(userId)){
+        if (userRepository.existsById(userId)) {
             return false
         }
 
@@ -103,7 +103,7 @@ class UserService(
         val user = userRepository.lockedFind(userId)!!
 
         val copy = user.ownedCards.find { it.cardId == cardId }
-        if(copy == null || copy.numberOfCopies == 0){
+        if (copy == null || copy.numberOfCopies == 0) {
             throw IllegalArgumentException("User $userId does not own a copy of $cardId")
         }
 
@@ -113,13 +113,13 @@ class UserService(
         user.coins += millValue
     }
 
-    fun openPack(userId: String) : List<String> {
+    fun openPack(userId: String): List<String> {
 
         validateUser(userId)
 
         val user = userRepository.lockedFind(userId)!!
 
-        if(user.cardPacks < 1){
+        if (user.cardPacks < 1) {
             throw IllegalArgumentException("No pack to open")
         }
 

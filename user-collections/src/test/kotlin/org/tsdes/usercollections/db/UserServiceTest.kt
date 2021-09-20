@@ -29,12 +29,10 @@ class FakeCardService : CardService() {
 @ActiveProfiles("UserServiceTest", "test")
 @ExtendWith(SpringExtension::class)
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.NONE)
-internal class UserServiceTest {
-    @Autowired
-    private lateinit var userService: UserService
-
-    @Autowired
-    private lateinit var userRepository: UserRepository
+internal class UserServiceTest @Autowired constructor(
+    private val userService: UserService,
+    private val userRepository: UserRepository
+) {
 
     @BeforeEach
     fun initTest() {

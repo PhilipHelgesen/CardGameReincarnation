@@ -1,4 +1,4 @@
-package org.tsdes.usercollections.dto
+package org.tsdes.cards.dto
 
 import io.swagger.annotations.ApiModelProperty
 

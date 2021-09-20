@@ -20,6 +20,6 @@ class User(
     var cardPacks: Int = 0,
 
     @get:OneToMany(mappedBy = "user", cascade = [(CascadeType.ALL)])
-    var ownedCards : MutableList<CardCopy> = mutableListOf()
+    var ownedCards: MutableList<CardCopy> = mutableListOf()
 )
 

@@ -8,7 +8,7 @@ import org.tsdes.cards.dto.Rarity.GOLD
 import org.tsdes.cards.dto.Rarity.PINK_DIAMOND
 
 object FakeData {
-    fun getCollectionDto() : CollectionDto {
+    fun getCollectionDto(): CollectionDto {
 
         val dto = CollectionDto()
 
