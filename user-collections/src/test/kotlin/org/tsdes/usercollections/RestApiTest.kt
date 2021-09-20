@@ -1,6 +1,7 @@
 package org.tsdes.usercollections
 
 import io.restassured.RestAssured
+import io.restassured.RestAssured.given
 import org.junit.jupiter.api.Assertions.assertTrue
 import org.junit.jupiter.api.BeforeEach
 import org.junit.jupiter.api.Test
@@ -17,16 +18,11 @@ import javax.annotation.PostConstruct
 @ActiveProfiles("test")
 @ExtendWith(SpringExtension::class)
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
-internal class RestApiTest {
+internal class RestApiTest @Autowired constructor(
+    private val userService: UserService,
+    private val userRepository: UserRepository){
     @LocalServerPort
     protected var port = 0
-
-    @Autowired
-    lateinit var userService: UserService
-
-    @Autowired
-    lateinit var userRepository: UserRepository
-
     @PostConstruct
     fun init(){
         RestAssured.baseURI = "http://localhost"
@@ -44,14 +40,14 @@ internal class RestApiTest {
         val id = "Test"
         userService.registerNewUser(id)
 
-        RestAssured.given().get("/$id").then().statusCode(200)
+        given().get("/$id").then().statusCode(200)
     }
 
     @Test
     fun testCreateUser(){
         val id = "Test"
 
-        RestAssured.given().put("/$id").then().statusCode(201)
+        given().put("/$id").then().statusCode(201)
 
         assertTrue(userRepository.existsById(id))
     }
