@@ -31,8 +31,8 @@ class FakeCardService : CardService() {
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.NONE)
 internal class UserServiceTest @Autowired constructor(
     private val userService: UserService,
-    private val userRepository: UserRepository)
-{
+    private val userRepository: UserRepository
+) {
 
     @BeforeEach
     fun initTest() {

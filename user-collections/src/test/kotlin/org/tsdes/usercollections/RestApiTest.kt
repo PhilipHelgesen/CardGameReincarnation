@@ -20,23 +20,26 @@ import javax.annotation.PostConstruct
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 internal class RestApiTest @Autowired constructor(
     private val userService: UserService,
-    private val userRepository: UserRepository){
+    private val userRepository: UserRepository
+) {
     @LocalServerPort
     protected var port = 0
+
     @PostConstruct
-    fun init(){
+    fun init() {
         RestAssured.baseURI = "http://localhost"
         RestAssured.port = port
         RestAssured.basePath = "/api/user-collections"
         RestAssured.enableLoggingOfRequestAndResponseIfValidationFails()
     }
+
     @BeforeEach
     fun initTest() {
         userRepository.deleteAll()
     }
 
     @Test
-    fun testGetUser(){
+    fun testGetUser() {
         val id = "Test"
         userService.registerNewUser(id)
 
@@ -44,7 +47,7 @@ internal class RestApiTest @Autowired constructor(
     }
 
     @Test
-    fun testCreateUser(){
+    fun testCreateUser() {
         val id = "Test"
 
         given().put("/$id").then().statusCode(201)

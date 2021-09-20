@@ -46,25 +46,26 @@ class CardService {
             }
         }
     }
-    fun millValue(cardId: String) : Int {
+
+    fun millValue(cardId: String): Int {
         verifyCollection()
-        val card : Card = cardCollection.find { it.cardId  == cardId} ?:
-        throw IllegalArgumentException("Invalid cardId $cardId")
+        val card: Card =
+            cardCollection.find { it.cardId == cardId } ?: throw IllegalArgumentException("Invalid cardId $cardId")
 
         return collection!!.millValues[card.rarity]!!
     }
 
-    fun price(cardId: String) : Int {
+    fun price(cardId: String): Int {
         verifyCollection()
-        val card : Card = cardCollection.find { it.cardId  == cardId} ?:
-        throw IllegalArgumentException("Invalid cardId $cardId")
+        val card: Card =
+            cardCollection.find { it.cardId == cardId } ?: throw IllegalArgumentException("Invalid cardId $cardId")
 
         return collection!!.prices[card.rarity]!!
     }
 
-    fun getRandomSelection(n: Int) : List<Card>{
+    fun getRandomSelection(n: Int): List<Card> {
 
-        if(n <= 0){
+        if (n <= 0) {
             throw IllegalArgumentException("Non-positive n: $n")
         }
 
@@ -80,14 +81,14 @@ class CardService {
 
         repeat(n) {
             val p = Math.random()
-            val r = when{
+            val r = when {
                 p <= bronze -> Rarity.BRONZE
                 p > bronze && p <= bronze + silver -> Rarity.SILVER
                 p > bronze + silver && p <= bronze + silver + gold -> Rarity.GOLD
                 p > bronze + silver + gold -> Rarity.PINK_DIAMOND
                 else -> throw IllegalStateException("BUG for p=$p")
             }
-            val card = collection!!.cardsByRarity[r].let{ it!![Random.nextInt(it.size)] }
+            val card = collection!!.cardsByRarity[r].let { it!![Random.nextInt(it.size)] }
             selection.add(card)
         }
 

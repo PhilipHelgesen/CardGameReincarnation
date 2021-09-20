@@ -13,11 +13,10 @@ import org.tsdes.usercollections.db.UserService
     produces = [(MediaType.APPLICATION_JSON_VALUE)]
 )
 @RestController
-class RestApi (private val userService: UserService){
+class RestApi(private val userService: UserService) {
 
     @GetMapping(path = ["/{userId}"])
-    fun getUserInfo(@PathVariable("userId") userId: String) : ResponseEntity<UserDto>
-    {
+    fun getUserInfo(@PathVariable("userId") userId: String): ResponseEntity<UserDto> {
         val user = userService.findByIdEager(userId) ?: return ResponseEntity.notFound().build()
         return ResponseEntity.status(200).body(DtoConverter.transform(user))
     }
