@@ -335,6 +335,68 @@
                 <version>4.5.12</version>
             </dependency>
 
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-dependencies</artifactId>
+                <version>${version.springcloud}</version>
+                <scope>import</scope>
+                <type>pom</type>
+            </dependency>
+
+            <!-- SpringFox for Swagger/OpenAPI -->
+            <dependency>
+                <groupId>io.springfox</groupId>
+                <artifactId>springfox-boot-starter</artifactId>
+                <version>${version.springfox}</version>
+            </dependency>
+
+
+            <!--  GraphQL -->
+            <dependency>
+                <groupId>com.graphql-java</groupId>
+                <artifactId>graphql-spring-boot-starter</artifactId>
+                <version>${version.graphql-spring}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.graphql-java</groupId>
+                <artifactId>graphiql-spring-boot-starter</artifactId>
+                <version>${version.graphql-spring}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.graphql-java</groupId>
+                <artifactId>voyager-spring-boot-starter</artifactId>
+                <version>${version.graphql-spring}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.graphql-java</groupId>
+                <artifactId>graphql-java-tools</artifactId>
+                <version>${version.graphql-java-tools}</version>
+            </dependency>
+
+
+            <!-- Misc -->
+            <dependency>
+                <groupId>com.netflix.hystrix</groupId>
+                <artifactId>hystrix-core</artifactId>
+                <version>1.5.12</version>
+            </dependency>
+            <dependency>
+                <groupId>io.reactivex</groupId>
+                <artifactId>rxjava</artifactId>
+                <version>1.2.2</version>
+            </dependency>
+            <dependency>
+                <groupId>org.evomaster</groupId>
+                <artifactId>evomaster-client-java-controller</artifactId>
+                <version>1.0.1</version>
+                <scope>test</scope>
+                <exclusions>
+                    <exclusion>
+                        <groupId>javax.validation</groupId>
+                        <artifactId>validation-api</artifactId>
+                    </exclusion>
+                </exclusions>
+            </dependency>
 
         </dependencies>
     </dependencyManagement>
