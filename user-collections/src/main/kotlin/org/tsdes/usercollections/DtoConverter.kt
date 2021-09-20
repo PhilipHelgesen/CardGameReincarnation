@@ -2,11 +2,11 @@ package org.tsdes.usercollections
 
 import org.tsdes.usercollections.db.CardCopy
 import org.tsdes.usercollections.db.User
-import org.tsdes.usercollections.dto.CardCopyDto
-import org.tsdes.usercollections.dto.UserDto
+import org.tsdes.cards.dto.CardCopyDto
+import org.tsdes.cards.dto.UserDto
 
 object DtoConverter{
-    fun transform(user: User) : UserDto{
+    fun transform(user: User) : UserDto {
         return UserDto().apply {
             userId = user.userId
             coins = user.coins
