@@ -5,9 +5,10 @@ tasks from in advanced https://github.com/arcuri82/testing_security_development_
 ## Tasks completed: 
 - [x] task 1
 - [x] task 2
+- [x] task 3
 
 ## to do :
-- [] task 3
+
 - [] task 4
 - [] task 5
 - [] task 6
