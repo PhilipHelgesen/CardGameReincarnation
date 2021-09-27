@@ -9,7 +9,7 @@ import springfox.documentation.service.ApiInfo
 import springfox.documentation.spi.DocumentationType
 import springfox.documentation.spring.web.plugins.Docket
 
-@SpringBootApplication
+@SpringBootApplication(scanBasePackages = ["org.tsdes"])
 class Application {
     @Bean
     fun swaggerApi(): Docket {
