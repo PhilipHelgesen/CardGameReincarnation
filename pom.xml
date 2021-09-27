@@ -10,6 +10,8 @@
     <modules>
         <module>cards-dto</module>
         <module>user-collections</module>
+        <module>rest-dto</module>
+        <module>test-exception</module>
     </modules>
     <packaging>pom</packaging>
 
