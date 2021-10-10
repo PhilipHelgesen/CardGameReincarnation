@@ -11,7 +11,8 @@
         <module>cards-dto</module>
         <module>user-collections</module>
         <module>rest-dto</module>
-        <module>test-exception</module>
+        <module>rest-exception</module>
+        <module>scores</module>
     </modules>
     <packaging>pom</packaging>
 
@@ -30,7 +31,7 @@
         <!--  FIXME version 1.4.200 breaks tests, eg in JPA-JPQL  -->
         <version.h2>1.4.197</version.h2>
         <version.postgres>42.1.4</version.postgres>
-
+        <kotlin.version>1.5.30</kotlin.version>
         <version.testcontainers>1.15.1</version.testcontainers>
         <version.selenium>3.141.59</version.selenium>
         <version.restassured>4.2.0</version.restassured>
