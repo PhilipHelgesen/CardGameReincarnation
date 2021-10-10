@@ -1,4 +1,8 @@
 spring:
+  mvc:
+    throwExceptionIfNoHandlerFound: true
+    resources:
+      add-mappings: false
   application:
     name: user-collections-service
   datasource:

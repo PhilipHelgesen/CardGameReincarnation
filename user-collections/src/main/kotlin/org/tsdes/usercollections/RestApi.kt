@@ -5,6 +5,8 @@ import io.swagger.annotations.ApiOperation
 import org.springframework.http.MediaType
 import org.springframework.http.ResponseEntity
 import org.springframework.web.bind.annotation.*
+import org.tsdes.advanced.rest.dto.RestResponseFactory
+import org.tsdes.advanced.rest.dto.WrappedResponse
 import org.tsdes.cards.dto.UserDto
 import org.tsdes.usercollections.db.UserService
 import org.tsdes.usercollections.dto.Command
@@ -39,35 +41,35 @@ class RestApi(private val userService: UserService) {
     fun patchUser(
         @PathVariable("userId") userId: String,
         @RequestBody dto: PatchUsersDto
-    ): ResponseEntity<PatchResultDto> {
+    ): ResponseEntity<WrappedResponse<PatchResultDto>> {
         return when (dto.command) {
             Command.BUY_CARD -> {
-                val cardId = dto.cardId ?: return ResponseEntity.status(400).build()
+                val cardId = dto.cardId ?: return RestResponseFactory.userFailure("Missing card id")
                 try {
                     userService.buyCard(userId, cardId)
                 } catch (e: java.lang.IllegalArgumentException) {
-                    return ResponseEntity.status(400).build()
+                    return RestResponseFactory.userFailure(e.message ?: "Failed to buy card ${dto.cardId}")
                 }
-                ResponseEntity.status(200).body(PatchResultDto())
+                RestResponseFactory.payload(200,PatchResultDto())
             }
             Command.MILL_CARD -> {
-                val cardId = dto.cardId ?: return ResponseEntity.status(400).build()
+                val cardId = dto.cardId ?: return RestResponseFactory.userFailure("Missing card id")
                 try {
                     userService.millCard(userId, cardId)
                 } catch (e: java.lang.IllegalArgumentException) {
-                    return ResponseEntity.status(400).build()
+                    return RestResponseFactory.userFailure(e.message ?: "Failed to mill card $cardId")
                 }
-                ResponseEntity.status(200).body(PatchResultDto())
+                RestResponseFactory.payload(200, PatchResultDto())
             }
             Command.OPEN_PACK -> {
                 val ids = try {
                     userService.openPack(userId)
                 } catch (e: IllegalArgumentException) {
-                    return ResponseEntity.status(400).build()
+                    return RestResponseFactory.userFailure(e.message ?: "Failed to open pack")
                 }
-                ResponseEntity.status(200).body(PatchResultDto().apply { cardIdsInOpenedPack.addAll(ids) })
+                RestResponseFactory.payload(200, PatchResultDto().apply { cardIdsInOpenedPack.addAll(ids) })
             }
-            else -> ResponseEntity.status(400).build()
+            else -> RestResponseFactory.userFailure("Unrecognized command: ${dto.command}")
         }
     }
 }

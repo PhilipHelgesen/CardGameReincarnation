@@ -1,4 +1,4 @@
-package org.tsdes.usercollections
+package org.tsdes.scores
 
 import org.springframework.boot.SpringApplication
 import org.springframework.boot.autoconfigure.SpringBootApplication
