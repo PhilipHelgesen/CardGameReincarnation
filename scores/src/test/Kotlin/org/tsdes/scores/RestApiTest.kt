@@ -25,7 +25,7 @@ import javax.annotation.PostConstruct
     classes = [(Application::class)],
     webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT
 )
-internal class RestApiTest @Autowired constructor(private val service: UserStatsService, private val repository: UserStatsRepository) {
+internal class RestApiTest @Autowired constructor( private val repository: UserStatsRepository) {
 
     @LocalServerPort
     protected var port = 0
@@ -39,10 +39,6 @@ internal class RestApiTest @Autowired constructor(private val service: UserStats
 
     val page: Int = 10
 
-    @Test
-    fun testInit(){
-        assertTrue(repository.count() > 10)
-    }
 
     @Test
     fun testGetPage() {

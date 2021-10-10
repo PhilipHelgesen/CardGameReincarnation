@@ -34,8 +34,8 @@ class RestAPI(
         return RestResponseFactory.payload(200, DtoConverter.transform(user))
     }
 
-    @GetMapping(path = ["/{userId}"])
-    fun createUser(@PathVariable userId: String): ResponseEntity<WrappedResponse<Void>> =
+    @PutMapping(path = ["/{userId}"])
+    fun createUser(@PathVariable("userId") userId: String): ResponseEntity<WrappedResponse<Void>> =
         if (statsService.registerNewUser(userId)) RestResponseFactory.noPayload(201)
         else RestResponseFactory.userFailure("User $userId already exist")
 
