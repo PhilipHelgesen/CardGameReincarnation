@@ -13,6 +13,7 @@
         <module>rest-dto</module>
         <module>rest-exception</module>
         <module>scores</module>
+        <module>cards</module>
     </modules>
     <packaging>pom</packaging>
 
