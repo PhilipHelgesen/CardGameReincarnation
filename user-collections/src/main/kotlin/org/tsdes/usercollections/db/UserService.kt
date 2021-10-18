@@ -20,8 +20,8 @@ interface UserRepository : CrudRepository<User, String> {
 @Service
 @Transactional
 class UserService(
-    private val userRepository: UserRepository,
-    private val cardService: CardService
+        private val userRepository: UserRepository,
+        private val cardService: CardService
 ) {
 
     companion object {
@@ -89,12 +89,12 @@ class UserService(
 
     private fun addCard(user: User, cardId: String) {
         user.ownedCards.find { it.cardId == cardId }
-            ?.apply { numberOfCopies++ }
-            ?: CardCopy().apply {
-                this.cardId = cardId
-                this.user = user
-                this.numberOfCopies = 1
-            }.also { user.ownedCards.add(it) }
+                ?.apply { numberOfCopies++ }
+                ?: CardCopy().apply {
+                    this.cardId = cardId
+                    this.user = user
+                    this.numberOfCopies = 1
+                }.also { user.ownedCards.add(it) }
     }
 
     fun millCard(userId: String, cardId: String) {
